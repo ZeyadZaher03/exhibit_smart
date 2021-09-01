@@ -1,0 +1,348 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input:placeholder-shown,
+input,
+textarea,
+button,
+select,
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.create-service-container {
+  padding: 15px 20px;
+  margin-top: 10px;
+  opacity: 0;
+  margin-bottom: 10px;
+  display: none;
+  border-radius: 5px;
+  height: 90vh;
+  border: 1px solid #e7e7e7;
+  overflow: hidden;
+  overflow-y: scroll;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  width: 500px;
+}
+
+.create-supplier{
+  padding: 15px 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  height:auto;
+  max-height: 80vh;
+  border: 1px solid #e7e7e7;
+  overflow: hidden;
+  /* overflow-y: scroll; */
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  width: 500px;
+}
+
+html{
+  height: 100vh;
+}
+
+/* width */
+.create-service-container::-webkit-scrollbar {
+  width:4px;
+}
+
+/* Track */
+.create-service-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+/* Handle */
+.create-service-container::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+.create-service-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.create-service-container > div {
+  margin-bottom: 13px;
+}
+
+.create-supplier > div{
+  margin-bottom: 13px;
+}
+
+.service-input-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.service-select-input {
+  padding: 3px 7px;
+  border-radius: 3px;
+  font-size: 16px;
+  border: 1px solid #ccdfcf;
+}
+
+.service-select-input-container {
+  width: 100%;
+}
+
+.service-stock-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.service-stock-container input {
+  width: 50px;
+  margin: 0 10px;
+}
+
+.stock-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 1px solid #187e0b;
+  font-weight: 700;
+  font-size: 20px;
+  position: relative;
+  background-color: #0e9e15;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  height: 30px;
+  width: 30px;
+  color: #fff;
+}
+
+#service_stock {
+  text-align: center;
+}
+
+.service-input-container label {
+  margin-bottom: 6px;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+#service_creationDate {
+  padding: 3px 7px;
+  border-radius: 3px;
+  font-size: 16px;
+  border: 1px solid #ccdfcf;
+}
+
+.create-service-grid-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 16px;
+}
+
+.create-service-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 16px;
+}
+
+.service-add-image-drop-container {
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  font-size: 40px;
+  border: 3px dotted #b6b6b6;
+  border-radius: 2px;
+  margin-bottom: 10px;
+}
+
+#serviceImage {
+  display: none;
+}
+
+.service-add-image-drop-container--active {
+  border-color: #52ac47;
+}
+
+.service-add-image {
+  justify-content: start;
+  align-items: flex-start;
+}
+
+.service-image-container {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 10px;
+  border: 2px solid #ddd;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.service-image-container img {
+  width: 100%;
+}
+
+.service-image-close-contaienr {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 14px;
+  background-color: rgba(0, 0, 0, 0.3);
+  right: 3px;
+  top: 5px;
+  transition: all 0.2s ease-in-out;
+}
+
+.service-image-close-contaienr:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.service-image-container {
+  position: relative;
+  display: none;
+}
+
+.link-style {
+  color: #52ac47;
+}
+
+.service-textarea {
+  width: 100%;
+  resize: none;
+  border-radius: 2px;
+  min-width: 100%;
+  max-width: 100%;
+  height: 200px;
+  max-height: 200px;
+  max-height: 200px;
+  border: 1px solid #ccdfcf;
+  padding: 10px;
+  background-color: #8ada9511;
+}
+
+.supplier-textarea{
+  height: 70px;
+  padding: 10px;
+  border: 1px solid #ccdfcf;
+  resize: none;
+  width: 100%;
+  border-radius: 2px;
+  
+}
+
+#service_serviceDescriptionAR,
+#service_serviceNameAR {
+  text-align: end;
+}
+
+.buttons-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.service-submit-button-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-submit-button {
+  padding: 5px 15px;
+  color: #fff;
+  border: #187e0b;
+  border-radius: 20px;
+  margin-top: 15px;
+  cursor: pointer;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
+  background-color: #52ac47;
+}
+
+.wishlist-modal{
+    padding: 10px;
+    display: flex;
+    width: 300px;
+    margin-top: 20px;
+    display: none;
+    opacity: 0;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.wishlist-modal p {
+    font-size: 18px;
+}
+.wishlist-modal p i  {
+    font-size: 15px;
+    margin-left: 2px;
+}
+.overflow-modal-close,
+.wishlist-modal-close{
+  width: 30px;
+  border: 0;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.overflow-modal-close:hover,
+.wishlist-modal-close:hover{
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.overflow-message{
+  width: 99%;
+  display: none;
+  opacity: 0;
+  margin: 0 auto;
+  align-items: center;
+  border-radius: 3px;
+  position: absolute;
+  padding: 10px 20px;
+  background-color: #53ac4754;
+  border:1px solid #52ac47;
+top: 100px;
+display: flex;
+justify-content: space-between;
+}
+
+@media (max-device-width: 500px) {
+  .create-service-container {
+    width: 340px;
+  }
+  .create-service-grid-3 {
+    grid-template-columns: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 10px;
+  }
+
+  .create-service-grid-2 {
+    grid-column-gap: 0px;
+    grid-template-columns: 1fr;
+    grid-row-gap: 10px;
+  }
+}

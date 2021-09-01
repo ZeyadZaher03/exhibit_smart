@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Anime  -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"
+      integrity="sha256-hBMojZuWKocCflyaG8T19KBq9OlTlK39CTxb8AUWKhY="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Font Awsome -->
+    <script
+      src="https://kit.fontawesome.com/c3284027a8.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Create service</title>
+  </head>
+  <body>
+    <div class="container">
+      <form class="create-service-container">
+        <div class="create-service-grid-3">
+          <div class="service-input-container service-select-input-container">
+            <label for="service_category">Category:</label>
+            <select id="service_category" class="service-select-input">
+              <option value="" disabled selected>Select</option>
+            </select>
+          </div>
+
+          <div class="service-input-container service-select-input-container">
+            <label for="service_subCategory">Sub-Category:</label>
+            <select id="service_subCategory" class="service-select-input">
+              <option value="" disabled selected>Select</option>
+            </select>
+          </div>
+
+          <div class="service-input-container service-select-input-container">
+            <label for="service_supplierId">Supplier Id:</label>
+            <select id="service_supplierId" class="service-select-input">
+              <option value="" disabled selected>Select</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="create-service-grid-2">
+          <div class="service-input-container service-select-input-container">
+            <label for="service_creationDate">Creation Date:</label>
+            <input
+              type="date"
+              id="service_creationDate"
+              class="service-input"
+            />
+          </div>
+
+          <div class="service-input-container service-select-input-container">
+            <label for="service_coveredCity">Covered City:</label>
+            <select id="service_coveredCity" class="service-select-input">
+              <option value="" selected disabled>Select City</option>
+              <option value="Dubai, Abu Dhabi">Dubai, Abu Dhabi</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="create-service-grid-2">
+          <div class="service-input-container">
+            <label for="service_serviceNameAR">Stock:</label>
+            <div class="service-stock-container">
+              <button id="minusButtonStock" class="stock-button">-</button>
+              <input
+                id="service_stock"
+                value="0"
+                class="service-select-input"
+              />
+              <button id="plusButtonStock" class="stock-button">+</button>
+            </div>
+          </div>
+
+          <div class="service-input-container service-select-input-container">
+            <label for="service_serviceNameAR">Ordered:</label>
+            <span>0</span>
+          </div>
+        </div>
+
+        <div class="create-service-grid-2">
+          <div class="service-input-container service-select-input-container">
+            <label for="service_serviceNameEN">Service Name (EN):</label>
+            <input id="service_serviceNameEN" class="service-select-input" />
+          </div>
+
+          <div class="service-input-container service-select-input-container">
+            <label for="service_serviceNameAR">Service Name (AR):</label>
+            <input id="service_serviceNameAR" class="service-select-input" />
+          </div>
+        </div>
+
+        <div class="service-input-container service-select-input-container">
+          <label for="service_color">Color:</label>
+          <select id="service_color" class="service-select-input">
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="black">Black</option>
+          </select>
+        </div>
+
+        <div class="service-input-container service-select-input-container">
+          <label for="service_size">size:</label>
+          <select id="service_size" class="service-select-input">
+            <option value="80x90">80x90</option>
+          </select>
+        </div>
+
+        <div class="service-input-container service-select-input-container">
+          <label for="service_space">Space:</label>
+          <select id="service_space" class="service-select-input">
+            <option value="small">Small</option>
+            <option value="medium" selected>Medium</option>
+            <option value="Large">Large</option>
+          </select>
+        </div>
+
+        <div class="service-input-container service-add-image">
+          <label for="service_coveredCity">Add Image:</label>
+          <div class="service-add-image-drop-container">
+            <i class="fas fa-cloud-upload-alt"></i>
+          </div>
+
+          <div class="service-image-container">
+            <div class="service-image-close-contaienr">
+              <i class="fas fa-times"></i>
+            </div>
+            <img src="assets/images/200px-Langdon_Alger.png" alt="" />
+          </div>
+          <input type="file" id="serviceImage" />
+          <p>
+            <a id="browes_files_button" class="link-style" href="#"
+              >BROWSE FILES</a
+            >
+            Or drop it here to upload
+          </p>
+          <p>File size limit : 10MB</p>
+        </div>
+        <div class="create-service-grid-2">
+          <div class="service-input-container service-select-input-container">
+            <label for="service_serviceDescriptionEN"
+              >Service Description (EN):</label
+            >
+            <textarea
+              id="service_serviceDescriptionEN"
+              class="service-textarea"
+            ></textarea>
+          </div>
+
+          <div class="service-input-container service-select-input-container">
+            <label for="service_serviceDescriptionAR"
+              >Service Description (AR):</label
+            >
+            <textarea
+              id="service_serviceDescriptionAR"
+              class="service-textarea"
+            ></textarea>
+          </div>
+        </div>
+        <div class="service-submit-button-container">
+          <button class="service-submit-button">Submit</button>
+        </div>
+      </form>
+
+      <form class="create-supplier">
+        <div class="create-service-grid-2">
+          <div class="service-input-container service-select-input-container">
+            <label for="supplier_firstName">First Name:</label>
+            <input id="supplier_firstName" class="service-select-input" />
+          </div>
+
+          <div class="service-input-container service-select-input-container">
+            <label for="supplier_lastName">Last Name:</label>
+            <input id="supplier_lastName" class="service-select-input" />
+          </div>
+        </div>
+        <div class="create-service-grid-2">
+          <div class="service-input-container service-select-input-container">
+            <label for="supplier_firstName">Email:</label>
+            <input id="supplier_firstName" class="service-select-input" />
+          </div>
+
+          <div class="service-input-container service-select-input-container">
+            <label for="supplier_lastName">Phone Number</label>
+            <input id="supplier_lastName" class="service-select-input" />
+          </div>
+        </div>
+
+        <div class="service-input-container service-select-input-container">
+          <label for="supplier_lastName">Password</label>
+          <input id="supplier_lastName" class="service-select-input" />
+        </div>
+        <div class="service-input-container service-select-input-container">
+          <label for="supplier_lastName">Company Adress</label>
+          <textarea
+          id="service_serviceDescriptionAR"
+          class="supplier-textarea"
+          ></textarea>
+        </div>
+        <div class="service-input-container service-select-input-container">
+          <label for="supplier_lastName">Company Phone Number</label>
+          <input id="supplier_lastName" class="service-select-input" />
+        </div>
+
+        
+
+        <div class="service-submit-button-container">
+          <button class="service-submit-button">create</button>
+        </div>
+      </form>
+
+      <div class="wishlist-modal">
+        <p>Added to Wishlist <i class="fas fa-check"></i></p>
+        <button class="wishlist-modal-close">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <div class="overflow-message">
+        <p></p>
+        <button class="overflow-modal-close">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+    </div>
+    <div class="buttons-bar">
+      <button id="createServiceViewButton">open Service Conainer</button>
+      <button id="addToWishlistButton">open add to wish list</button>
+      <button id="overFlowMessageButton">open overflow message</button>
+    </div>
+    <script src="js/create-service.js"></script>
+  </body>
+</html>

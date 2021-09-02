@@ -152,6 +152,7 @@
           </p>
           <p>File size limit : 10MB</p>
         </div>
+
         <div class="create-service-grid-2">
           <div class="service-input-container service-select-input-container">
             <label for="service_serviceDescriptionEN"
@@ -173,63 +174,118 @@
             ></textarea>
           </div>
         </div>
-        <div class="service-submit-button-container">
-          <button class="service-submit-button">Submit</button>
+        <div class="form-submit-button-container">
+          <button id="createServiceSubmitButton" class="form-submit-button">
+            Submit
+          </button>
         </div>
       </form>
 
       <form class="create-supplier">
-        <div class="create-service-grid-2">
-          <div class="service-input-container service-select-input-container">
-            <label for="supplier_firstName">First Name:</label>
-            <input id="supplier_firstName" class="service-select-input" />
+        <div class="create-supplier-header">
+          <h1>Create Supplier</h1>
+          <div class="supplier-close-contaienr">
+            <i class="fas fa-times"></i>
+          </div>
+        </div>
+        <div class="create-supplier-container">
+          <div class="create-service-grid-2">
+            <div class="service-input-container service-select-input-container">
+              <label for="supplier_firstName">First Name:</label>
+              <input id="supplier_firstName" class="service-select-input" />
+              <span class="input-error"></span>
+            </div>
+
+            <div class="service-input-container service-select-input-container">
+              <label for="supplier_lastName">Last Name:</label>
+              <input id="supplier_lastName" class="service-select-input" />
+              <span class="input-error"></span>
+            </div>
+          </div>
+
+          <div class="create-service-grid-2">
+            <div class="service-input-container service-select-input-container">
+              <label for="supplier_email">Email:</label>
+              <input id="supplier_email" class="service-select-input" />
+              <span class="input-error"></span>
+            </div>
+
+            <div class="service-input-container service-select-input-container">
+              <label for="supplier_phoneNumber">Phone Number</label>
+              <input id="supplier_phoneNumber" class="service-select-input" />
+              <span class="input-error"></span>
+            </div>
           </div>
 
           <div class="service-input-container service-select-input-container">
-            <label for="supplier_lastName">Last Name:</label>
-            <input id="supplier_lastName" class="service-select-input" />
-          </div>
-        </div>
-        <div class="create-service-grid-2">
-          <div class="service-input-container service-select-input-container">
-            <label for="supplier_firstName">Email:</label>
-            <input id="supplier_firstName" class="service-select-input" />
+            <label for="supplier_password">Password</label>
+            <input id="supplier_password" class="service-select-input" />
+            <span class="input-error"></span>
           </div>
 
           <div class="service-input-container service-select-input-container">
-            <label for="supplier_lastName">Phone Number</label>
-            <input id="supplier_lastName" class="service-select-input" />
+            <label for="supplier_companyAdress">Company Adress</label>
+            <textarea
+              id="supplier_companyAdress"
+              class="supplier-textarea"
+            ></textarea>
+            <span class="input-error"></span>
           </div>
-        </div>
 
-        <div class="service-input-container service-select-input-container">
-          <label for="supplier_lastName">Password</label>
-          <input id="supplier_lastName" class="service-select-input" />
-        </div>
-        <div class="service-input-container service-select-input-container">
-          <label for="supplier_lastName">Company Adress</label>
-          <textarea
-          id="service_serviceDescriptionAR"
-          class="supplier-textarea"
-          ></textarea>
-        </div>
-        <div class="service-input-container service-select-input-container">
-          <label for="supplier_lastName">Company Phone Number</label>
-          <input id="supplier_lastName" class="service-select-input" />
-        </div>
+          <div class="service-input-container service-select-input-container">
+            <label for="supplier_companyPhoneNumber"
+              >Company Phone Number</label
+            >
+            <input
+              id="supplier_companyPhoneNumber"
+              class="service-select-input"
+            />
+            <span class="input-error"></span>
+          </div>
 
-        
+          <div class="service-input-container supplier-add-image">
+            <label for="service_files">Add File:</label>
+            <div class="service-add-image-drop-container">
+              <i class="fas fa-cloud-upload-alt"></i>
+            </div>
 
-        <div class="service-submit-button-container">
-          <button class="service-submit-button">create</button>
+            <div class="supplier-image-container">
+              <div class="supplier-image-close-contaienr">
+                <i class="fas fa-times"></i>
+              </div>
+              <img src="assets/images/200px-Langdon_Alger.png" alt="" />
+            </div>
+            <span class="input-error"></span>
+            <input type="file" id="supplierFiles" />
+            <p>
+              <a id="supplierBrowesFilesButton" class="link-style" href="#"
+                >BROWSE FILES</a
+              >
+              Or drop it here to upload
+            </p>
+            <p>File size limit : 10MB</p>
+          </div>
+
+          <div class="form-submit-button-container">
+            <button id="createSupplierSubmitButton" class="form-submit-button">
+              Create
+            </button>
+          </div>
         </div>
       </form>
 
       <div class="wishlist-modal">
         <p>Added to Wishlist <i class="fas fa-check"></i></p>
-        <button class="wishlist-modal-close">
-          <i class="fas fa-times"></i>
-        </button>
+        
+        <div class="wishlist-modal-actions">
+          <button class="wishlist-modal-close">
+            Close
+          </button>
+
+          <button class="wishlist-modal-ok">
+            Ok
+          </button>
+        </div>
       </div>
 
       <div class="overflow-message">
@@ -243,6 +299,9 @@
       <button id="createServiceViewButton">open Service Conainer</button>
       <button id="addToWishlistButton">open add to wish list</button>
       <button id="overFlowMessageButton">open overflow message</button>
+      <button id="overFlowMessageButton">open overflow message</button>
+      <button id="createSupplierViewButton">open overflow message</button>
+      <a href="favorites.html">favorites</a>
     </div>
     <script src="js/create-service.js"></script>
   </body>
